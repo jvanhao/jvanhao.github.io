@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>爆米花乐队 | 桥头音乐会70场惠民演出策划方案</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #2d2a24;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: #f5b04220;
+            color: #c96f0e;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #c95b0a, #e89a3e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.75rem;
+        }
+        .subhead {
+            font-size: 1.2rem;
+            color: #5e5a52;
+            max-width: 720px;
+            margin: 0 auto 1.5rem auto;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+        .card {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            border: 1px solid #ffe5cf;
+        }
+        .card-icon {
+            font-size: 2.4rem;
+            color: #e57c1e;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 4px solid #f0c48b;
+            display: inline-block;
+        }
+        .theme-category {
+            background: #fffaf5;
+            border-radius: 1.5rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .theme-category h4 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ac581c;
+        }
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+        .badge {
+            background: white;
+            border: 1px solid #ffdebc;
+            border-radius: 40px;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #654321;
+        }
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .mini-item {
+            background: white;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            border-left: 4px solid #f5b642;
+        }
+        .interactive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .inter-card {
+            background: #fef3e8;
+            border-radius: 1.5rem;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .inter-icon {
+            font-size: 2rem;
+            color: #e4812a;
+        }
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .two-columns { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
+        .info-box {
+            background: #fff7ef;
+            border-radius: 1.5rem;
+            padding: 1.3rem 1.5rem;
+            border: 1px solid #ffecda;
+        }
+        .exec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ffdfc2;
+            font-size: 0.85rem;
+            color: #9b8a74;
+        }
+        .btn-tag {
+            display: inline-block;
+            background: #f0e3d6;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #a55b1a;
+            margin-top: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <div class="hero-badge"><i class="fas fa-music"></i> 惠民文化新名片 · 宜昌骄傲</div>
+        <h1>70场桥头音乐会<br>「场场不同 · 全民共享」</h1>
+        <div class="subhead">
+            爆米花乐队 × 宜昌文旅｜用音乐温暖城市，让歌声成为幸福底色
+        </div>
+    </div>
+
+    <!-- 核心定位 -->
+    <div class="grid-3">
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>场场不同</h3>
+            <p>70场演出·70个独立主题，覆盖风格、歌手、节日、情感话题，每场都有新鲜感与仪式感。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+            <h3>惠民互动</h3>
+            <p>不是商演，是“大家一起玩”！开放麦、现场点歌、方言合唱，让市民成为舞台主角。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-dragon"></i></div>
+            <h3>文化赋能</h3>
+            <p>融合长阳山歌、薅草锣鼓等非遗，邀请本土艺术家，打造有宜昌温度的音乐名片。</p>
+        </div>
+    </div>
+
+    <!-- 主题规划 -->
+    <div><span class="section-title"><i class="fas fa-list-ul"></i> 70场主题全维度</span></div>
+
+    <div class="theme-category">
+        <h4><i class="fas fa-guitar"></i> 🎶 音乐风格类 · 20场</h4>
+        <div class="badge-grid">
+            <span class="badge">流行金曲夜</span><span class="badge">港台金曲季</span><span class="badge">情歌对唱夜</span>
+            <span class="badge">民谣诗会</span><span class="badge">摇滚不眠夜</span><span class="badge">毕业主题季</span>
+            <span class="badge">影视金曲夜</span><span class="badge">爵士小酒馆</span><span class="badge">国风新韵</span>
+            <span class="badge">致敬经典</span><span class="badge">R&B节奏夜</span><span class="badge">青春回忆杀</span>
+            <span class="badge">舞曲狂欢夜</span><span class="badge">治愈系专场</span><span class="badge">金曲串烧夜</span>
+            <span class="badge">城市民谣夜</span><span class="badge">岁月留声机</span><span class="badge">新声代原创</span>
+            <span class="badge">音乐剧之夜</span><span class="badge">跨年狂欢夜</span>
+        </div>
+    </div>
+
+    <div class="theme-category">
+        <h4><i class="fas fa-microphone-alt"></i> 🎤 歌手专场类 · 12场</h4>
+        <div class="mini-grid">
+            <div class="mini-item">周杰伦专场</div><div class="mini-item">五月天专场</div><div class="mini-item">王力宏专场</div>
+            <div class="mini-item">林俊杰专场</div><div class="mini-item">邓丽君专场</div><div class="mini-item">陈奕迅专场</div>
+            <div class="mini-item">孙燕姿专场</div><div class="mini-item">张惠妹专场</div><div class="mini-item">李宗盛专场</div>
+            <div class="mini-item">刘若英专场</div><div class="mini-item">Beyond专场</div><div class="mini-item">赵雷/民谣专场</div>
+        </div>
+        <div class="btn-tag"><i class="fas fa-star"></i> 每场互动：合唱挑战/歌迷点歌/故事分享</div>
+    </div>
+
+    <div class="theme-category">
+        <h4><i class="fas fa-tree"></i> 🌸 节日/节气类 · 15场</h4>
+        <div class="mini-grid">
+            <div class="mini-item">元宵·团圆</div><div class="mini-item">清明·思念</div><div class="mini-item">劳动节·致敬劳动者</div>
+            <div class="mini-item">母亲节·唱给妈妈</div><div class="mini-item">520·表白日</div><div class="mini-item">六一·大小孩游乐园</div>
+            <div class="mini-item">端午·江边民谣夜</div><div class="mini-item">七夕·银河音乐会</div><div class="mini-item">中秋·江畔月光曲</div>
+            <div class="mini-item">教师节·谢谢您</div><div class="mini-item">国庆·我和我的祖国</div><div class="mini-item">重阳·时光音乐会</div>
+            <div class="mini-item">冬至·温暖如初</div><div class="mini-item">跨年夜·从0到1</div><div class="mini-item">春节·回家过年</div>
+        </div>
+    </div>
+
+    <div class="theme-category">
+        <h4><i class="fas fa-heart"></i> 💬 话题/情感类 · 23场</h4>
+        <div class="badge-grid">
+            <span class="badge">青春不散场</span><span class="badge">友谊万岁</span><span class="badge">理想与远方</span>
+            <span class="badge">岁月如歌</span><span class="badge">我爱我家</span><span class="badge">宜昌·我的家</span>
+            <span class="badge">再见旧时光</span><span class="badge">你好明天</span><span class="badge">平凡英雄</span>
+            <span class="badge">谢谢你</span><span class="badge">勇敢的心</span><span class="badge">初次见面</span>
+            <span class="badge">好久不见</span><span class="badge">一路同行</span><span class="badge">故乡的云</span>
+            <span class="badge">少年归来</span><span class="badge">温暖如初</span><span class="badge">向阳而生</span>
+            <span class="badge">烟火人间</span><span class="badge">三峡情</span><span class="badge">长江之歌</span>
+            <span class="badge">宜昌声音</span><span class="badge">我们的歌</span>
+        </div>
+    </div>
+
+    <!-- 惠民互动 -->
+    <div><span class="section-title"><i class="fas fa-users"></i> 惠民互动 · 让市民成为主角</span></div>
+    <div class="interactive-grid">
+        <div class="inter-card"><div class="inter-icon"><i class="fas fa-microphone"></i></div><div><h4>民星开放麦</h4><p>每场2-3位市民上台演唱，乐队即兴伴奏</p></div></div>
+        <div class="inter-card"><div class="inter-icon"><i class="fas fa-music"></i></div><div><h4>爆爆点歌台</h4><p>现场举手点歌，乐队即兴演奏，定制专属记忆</p></div></div>
+        <div class="inter-card"><div class="inter-icon"><i class="fas fa-vote-yea"></i></div><div><h4>投票选歌</h4><p>公众号/现场投票，决定下一场歌单</p></div></div>
+        <div class="inter-card"><div class="inter-icon"><i class="fas fa-language"></i></div><div><h4>方言合唱团</h4><p>宜昌话改编经典，现场教唱，超有归属感</p></div></div>
+        <div class="inter-card"><div class="inter-icon"><i class="fas fa-camera"></i></div><div><h4>全家福时刻</h4><p>每场结束大合影，现场打印赠送，定格温暖</p></div></div>
+        <div class="inter-card"><div class="inter-icon"><i class="fas fa-chalkboard-teacher"></i></div><div><h4>“我眼中的宜昌”</h4><p>邀请观众分享与宜昌的故事，点亮城市记忆</p></div></div>
+    </div>
+
+    <!-- 非遗与本土文化 -->
+    <div><span class="section-title"><i class="fas fa-drumstick-bite"></i> 非遗新生 · 宜昌声音</span></div>
+    <div class="two-columns">
+        <div class="info-box">
+            <h3><i class="fas fa-leaf"></i> 非遗艺术家邀约</h3>
+            <ul style="margin-left: 1.2rem; margin-top: 0.5rem;">
+                <li>🎵 长阳山歌传承人——山歌×流行跨界</li>
+                <li>🥁 薅草锣鼓——开场表演、互动体验</li>
+                <li>💃 土家摆手舞——现场教学，观众共舞</li>
+                <li>🎻 宜昌丝弦——器乐合奏，文化讲解</li>
+                <li>🎣 三峡渔歌——原生态演唱+老渔民故事</li>
+            </ul>
+            <div class="btn-tag"><i class="fas fa-hand-peace"></i> 每月1-2场非遗专场，让古老旋律在桥头新生</div>
+        </div>
+        <div class="info-box">
+            <h3><i class="fas fa-chalkboard"></i> 本土音乐人扶持</h3>
+            <p>「宜昌新声」计划：邀请本土原创音乐人登台；定期民谣开放麦、音乐分享会，搭建属于宜昌年轻人的舞台，让更多人听见家乡的创作。</p>
+            <div class="badge-grid" style="margin-top: 12px;">
+                <span class="badge">原创音乐人专场</span>
+                <span class="badge">校园乐队孵化</span>
+                <span class="badge">创作分享沙龙</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 传播与影响力 -->
+    <div><span class="section-title"><i class="fas fa-chart-line"></i> 传播矩阵 · 让宜昌被听见</span></div>
+    <div class="two-columns">
+        <div class="info-box">
+            <h4><i class="fab fa-tiktok"></i> 短视频爆款内容</h4>
+            <p>每场15秒精华片段 + 市民合唱瞬间 + “宜昌话挑战”<br>
+            话题运营：#宜昌桥头音乐会 #宜昌声音 #我在桥头听歌</p>
+            <h4 style="margin-top: 12px;"><i class="fas fa-newspaper"></i> 全媒体联动</h4>
+            <p>三峡日报、三峡广电跟踪报道，本地网红达人现场打卡，线上线下双向引流，打造城市级文化事件。</p>
+        </div>
+        <div class="info-box">
+            <h4><i class="fas fa-users-viewfinder"></i> 社群运营 · 长效连接</h4>
+            <p>建立“桥头音乐会粉丝群”，每周预告歌单投票，市民点歌直达乐队；定期放送排练花絮、非遗特辑，让惠民演出不止于现场。</p>
+            <div class="badge-grid" style="margin-top: 12px;">
+                <span class="badge">每周投票选歌</span>
+                <span class="badge">粉丝专属福利</span>
+                <span class="badge">精彩回顾云相册</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 执行保障 -->
+    <div><span class="section-title"><i class="fas fa-clipboard-list"></i> 高标准执行保障</span></div>
+    <div class="exec-grid">
+        <div class="card" style="padding:1rem;"><i class="fas fa-users"></i> <strong>人员配置</strong><br>核心乐手+轮换库+专职主持+音控摄影</div>
+        <div class="card" style="padding:1rem;"><i class="fas fa-calendar-week"></i> <strong>排期节奏</strong><br>周末2-3场/周，节假日每日1场，覆盖四季</div>
+        <div class="card" style="padding:1rem;"><i class="fas fa-tools"></i> <strong>设备双备份</strong><br>专业音响/乐器，恶劣天气室内备选场地</div>
+        <div class="card" style="padding:1rem;"><i class="fas fa-shield-alt"></i> <strong>安全预案</strong><br>人流疏导、应急医疗、街道协同</div>
+    </div>
+
+    <!-- 预期效果 -->
+    <div><span class="section-title"><i class="fas fa-chart-simple"></i> 愿景与价值</span></div>
+    <div class="grid-3" style="margin-bottom: 1rem;">
+        <div class="card"><i class="fas fa-smile"></i> <strong>市民幸福感↑</strong><br>覆盖10万+人次，打造“家门口的文化客厅”</div>
+        <div class="card"><i class="fas fa-landmark"></i> <strong>文旅新名片</strong><br>“桥头音乐会”成为宜昌城市IP，提升旅游吸引力</div>
+        <div class="card"><i class="fas fa-chart-line"></i> <strong>传播声量</strong><br>短视频总播放量预计500万+，话题讨论量千万级</div>
+    </div>
+
+    <!-- 结语 -->
+    <div style="background: #fff0e2; border-radius: 2rem; padding: 2rem; text-align: center; margin-top: 2rem;">
+        <i class="fas fa-quote-left" style="font-size: 2rem; color: #e4802a; opacity: 0.5;"></i>
+        <p style="font-size: 1.2rem; font-weight: 500; margin: 0.5rem 0;">70场演出，70次与宜昌的深情对话。<br>让音乐流淌在街头巷尾，成为市民幸福感的生动注脚。</p>
+        <p style="margin-top: 1rem; font-weight: 500;">—— 爆米花音乐文化传播有限公司 ——</p>
+        <p style="font-size: 0.85rem; color: #a96f32;">专业·本土·热爱 · 助力宜昌文旅惠民</p>
+    </div>
+
+    <div class="footer-note">
+        <i class="fas fa-heart" style="color:#e4802a;"></i> 从0到1，因你而在 | 宜昌桥头音乐会 · 全民共创音乐记忆
+    </div>
+</div>
+</body>
+</html>
